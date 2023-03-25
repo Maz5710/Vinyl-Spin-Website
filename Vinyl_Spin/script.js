@@ -333,10 +333,9 @@ function searchAlbums() {
 // Style Modals
 function populateModals() {
     var readMoreButtons = document.querySelectorAll(".readmore");
-    console.log("hi");
     Array.from(readMoreButtons).forEach(function (btn) {
         btn.addEventListener('click', function () {
-            console.log(albums[this.id].audioUrl);
+            //console.log(albums[this.id].audioUrl);
             var albumModal = document.getElementById('modalResult');
             albumModal.innerHTML = `
 
@@ -351,7 +350,6 @@ function populateModals() {
         <a href="${albums[this.id].audioUrl}" target="_blank" class="btn btn-secondary" data-bs-dismiss="modal">Listen</a>
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Buy</button>
             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-
         </div>
         `
         })
